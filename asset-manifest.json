@@ -1,17 +1,20 @@
 {
   "files": {
     "main.css": "/tajtrips/static/css/main.44f647b4.css",
-    "main.js": "/tajtrips/static/js/main.48684d68.js",
+    "main.js": "/tajtrips/static/js/main.46e9b39b.js",
     "static/media/taj-mahal-hero.webp": "/tajtrips/static/media/taj-mahal-hero.36083c002441eee81f20.webp",
+    "static/media/heritage-tour.webp": "/tajtrips/static/media/heritage-tour.eaa20f8b539282ca4346.webp",
     "static/media/full-day-tour.webp": "/tajtrips/static/media/full-day-tour.0ecfaee2fad1e5da8b62.webp",
     "static/media/golden-triangle-tour.webp": "/tajtrips/static/media/golden-triangle-tour.10f0e25965d95e3bcec1.webp",
+    "static/media/agra-food-tour.webp": "/tajtrips/static/media/agra-food-tour.a0078d579769be627836.webp",
     "static/media/sunrise-tour.webp": "/tajtrips/static/media/sunrise-tour.16adf302037fad1ea755.webp",
+    "static/media/moonlight-tour.webp": "/tajtrips/static/media/moonlight-tour.5636beea03bed8357704.webp",
     "index.html": "/tajtrips/index.html",
     "main.44f647b4.css.map": "/tajtrips/static/css/main.44f647b4.css.map",
-    "main.48684d68.js.map": "/tajtrips/static/js/main.48684d68.js.map"
+    "main.46e9b39b.js.map": "/tajtrips/static/js/main.46e9b39b.js.map"
   },
   "entrypoints": [
     "static/css/main.44f647b4.css",
-    "static/js/main.48684d68.js"
+    "static/js/main.46e9b39b.js"
   ]
 }
