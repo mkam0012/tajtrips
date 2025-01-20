@@ -4,6 +4,9 @@ import tajMahalHero from '../images/taj-mahal-hero.webp';  // hero image
 import sunrisetour from '../images/sunrise-tour.webp';  // hero image
 import fullDayTour from '../images/full-day-tour.webp';  // hero image
 import goldenTriangleTour from '../images/golden-triangle-tour.webp';  // hero image
+import agraFoodTour from '../images/agra-food-tour.webp';  // hero image
+import moonlightTour from '../images/moonlight-tour.webp';  // hero image
+import heritageTour from '../images/heritage-tour.webp';  // hero image
 
 interface FormValues {
   name: string;
@@ -20,6 +23,7 @@ interface Tour {
   duration: string;
   groupSize: string;
   price: string;
+  image: string;
 }
 
 interface Testimonial {
@@ -52,6 +56,58 @@ const TajTrips: React.FC = () => {
       [name]: value
     }));
   };
+
+// Separate tours data array
+const toursData: Tour[] = [
+  {
+    title: "Taj Mahal Sunrise Tour",
+    description: "Experience the breathtaking beauty of the Taj Mahal at sunrise",
+    duration: "4 hours",
+    groupSize: "Up to 6 people",
+    price: "$45",
+    image: sunrisetour
+  },
+  {
+    title: "Agra Full Day Tour",
+    description: "Visit Taj Mahal, Agra Fort, and other historical monuments",
+    duration: "8 hours",
+    groupSize: "Up to 8 people",
+    price: "$75",
+    image: fullDayTour
+  },
+  {
+    title: "Golden Triangle Tour",
+    description: "Explore Delhi, Agra, and Jaipur in a comprehensive tour",
+    duration: "3 days",
+    groupSize: "Up to 10 people",
+    price: "$299",
+    image: goldenTriangleTour
+  },
+  {
+    title: "Agra Food Tour",
+    description: "Experience the culinary delights of Agra with local food experts",
+    duration: "4 hours",
+    groupSize: "Up to 8 people",
+    price: "$35",
+    image: agraFoodTour
+  },
+  {
+    title: "Moonlight Taj Tour",
+    description: "View the Taj Mahal under the magical moonlight",
+    duration: "2 hours",
+    groupSize: "Up to 6 people",
+    price: "$55",
+    image: moonlightTour
+  },
+  {
+    title: "Heritage Walking Tour",
+    description: "Explore the hidden gems of Agra's rich history",
+    duration: "3 hours",
+    groupSize: "Up to 10 people",
+    price: "$25",
+    image: heritageTour
+  }
+];
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -118,63 +174,33 @@ const TajTrips: React.FC = () => {
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Our Popular Tours</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Taj Mahal Sunrise Tour",
-                description: "Experience the breathtaking beauty of the Taj Mahal at sunrise",
-                duration: "4 hours",
-                groupSize: "Up to 6 people",
-                price: "$45",
-                image: sunrisetour
-              },
-              {
-                title: "Agra Full Day Tour",
-                description: "Visit Taj Mahal, Agra Fort, and other historical monuments",
-                duration: "8 hours",
-                groupSize: "Up to 8 people",
-                price: "$75",
-                image: fullDayTour
-              },
-              {
-                title: "Golden Triangle Tour",
-                description: "Explore Delhi, Agra, and Jaipur in a comprehensive tour",
-                duration: "3 days",
-                groupSize: "Up to 10 people",
-                price: "$299",
-                image: goldenTriangleTour
-              }
-            ].map((tour, index) => (
-              <div key={index} className="bg-gray-50 rounded-lg overflow-hidden shadow-md">
-                <img 
-                  src={tour.image} 
-                  alt={tour.title}
-                  className="w-full h-64 object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">{tour.title}</h3>
-                  <p className="text-gray-600 mb-4">{tour.description}</p>
-                  <div className="space-y-2 text-sm text-gray-600">
-                    <div className="flex items-center">
-                      <Clock size={16} className="mr-2" />
-                      <span>{tour.duration}</span>
-                    </div>
-                    <div className="flex items-center">
-                      <Users size={16} className="mr-2" />
-                      <span>{tour.groupSize}</span>
-                    </div>
-                    <div className="flex items-center font-semibold text-lg text-blue-600">
-                      {tour.price}
-                    </div>
-                  </div>
-                  <a
-                    href="#contact"
-                    className="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-                  >
-                    Book Now
-                  </a>
-                </div>
+            {toursData.map((tour, index) => (
+        <div key={index} className="bg-gray-50 rounded-lg overflow-hidden shadow-md">
+          <img
+            src={tour.image}
+            alt={tour.title}
+            className="w-full h-64 object-cover"
+          />
+          <div className="p-6">
+            <h3 className="text-xl font-semibold mb-2">{tour.title}</h3>
+            <p className="text-gray-600 mb-4">{tour.description}</p>
+            <div className="space-y-2 text-sm text-gray-600">
+              <div className="flex items-center">
+                <Clock size={16} className="mr-2" />
+                <span>{tour.duration}</span>
               </div>
-            ))}
+              <div className="flex items-center">
+                <Users size={16} className="mr-2" />
+                <span>{tour.groupSize}</span>
+              </div>
+              <div className="flex items-center font-semibold text-lg text-blue-600">
+                {tour.price}
+              </div>
+            </div>
+            <a href="#contact" className="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 w-full text-center">Book Now</a>
+          </div>
+        </div>
+      ))}
           </div>
         </div>
       </div>
