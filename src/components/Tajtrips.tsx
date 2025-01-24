@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { Menu, X, MapPin, Clock, Users, Phone, Mail, Star } from 'lucide-react';
 import tajMahalHero from '../images/taj-mahal-hero.webp';  // hero image
-import sunrisetour from '../images/sunrise-tour.webp';  // hero image
-import fullDayTour from '../images/full-day-tour.webp';  // hero image
-import goldenTriangleTour from '../images/golden-triangle-tour.webp';  // hero image
-import agraFoodTour from '../images/agra-food-tour.webp';  // hero image
-import moonlightTour from '../images/moonlight-tour.webp';  // hero image
-import heritageTour from '../images/heritage-tour.webp';  // hero image
+import sunrisetour from '../images/sunrise-tour.jpeg';  // hero image
+import fullDayTour from '../images/full-day-tour.jpeg';  // hero image
+import goldenTriangleTour from '../images/golden-triangle-tour.jpeg';  // hero image
+import agraFoodTour from '../images/agra-food-tour.jpeg';  // hero image
+import moonlightTour from '../images/moonlight-tour.jpeg';  // hero image
+import heritageTour from '../images/heritage-tour.jpeg';  // hero image
 
 interface FormValues {
   name: string;
