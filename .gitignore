@@ -1,0 +1,12 @@
+# macOS metadata
+.DS_Store
+
+# Ignore build output
+build/
+
+# Node modules
+node_modules/
+
+# Cache files
+.cache/
+*.log
